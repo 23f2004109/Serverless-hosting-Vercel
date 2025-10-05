@@ -1,0 +1,22 @@
+name: Test Action with Email
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+    
+    - name: 23f2004109@ds.study.iitm.ac.in
+      run: echo "Hello, world! Task completed successfully."
+    
+    - name: Run additional test
+      run: |
+        echo "Testing GitHub Actions functionality"
+        date
