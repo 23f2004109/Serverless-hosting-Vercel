@@ -1,0 +1,23 @@
+// .devcontainer/devcontainer.json
+{
+  "name": "ga2-faddc0",
+  "image": "mcr.microsoft.com/devcontainers/universal:latest",
+  "features": {
+    // Required Python feature
+    "ghcr.io/devcontainers/features/python:1": {
+      "version": "3.11"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      // Required VS Code extensions
+      "extensions": [
+        "astral-sh.uv",
+        "ms-python.python"
+      ]
+    }
+  },
+  // Required command to run after the container is created
+  "postCreateCommand": "uv pip install fastapi",
+  "remoteUser": "codespace"
+}
